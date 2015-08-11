@@ -1,7 +1,16 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions implement a caching function for the solve() command by operating
+## on a new list object containing constructor methods
 
-## Write a short comment describing this function
+## Prototypes:
+## makeCacheMatrix(x = matrix())
+## cacheSolve(x, ...)
+
+## Usage:
+## a <- makeCacheMatrix(matrix(c(...), ncol = #, nrow = #))
+## cacheSolve(a)
+
+## makeCacheMatrix() - Constructor object with get/set methods
+## used to store original data and new values
 
 makeCacheMatrix <- function(x = matrix()) {
   
@@ -27,7 +36,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve() - Solver function that takes a makeCacheMatrix object
+## only runs the solve on cache miss
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
